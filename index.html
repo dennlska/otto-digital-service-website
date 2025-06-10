@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otto Digital Service – Ihre Zukunft, intelligent automatisiert.</title>
+    <style>
+        /* Allgemeine Stile für einen "Apple-ähnlichen" Premium-Look */
+        body {
+            font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7; /* Helles Grau für den Hintergrund */
+            color: #1d1d1f; /* Dunkles Grau für den Haupttext */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header (Nur für visuelle Referenz, da Google Sites eigenen Header hat) */
+        /* Diese Sektion wird in Google Sites vom eingebetteten Code umgeben sein und dient nur als visuelle Vorschau im Code */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center; /* Zentriert den Inhalt des Headers */
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1d1d1f;
+            text-decoration: none;
+            display: inline-block; /* Für Zentrierung */
+        }
+
+        /* Hero Sektion: Der prominente erste Bereich der Seite */
+        .hero-section {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 120px 20px; /* Mehr Polsterung für Premium-Gefühl */
+            min-height: 580px; /* Genug Höhe für visuelle Wirkung */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); /* Subtiler Schatten für Tiefe */
+            border-radius: 12px; /* Abgerundete Ecken für moderne Ästhetik */
+            margin-bottom: 40px; /* Abstand zur nächsten Sektion */
+        }
+
+        .hero-section h1 {
+            font-size: 58px; /* Sehr groß und prominent */
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: #1d1d1f;
+            max-width: 850px; /* Begrenzte Breite für bessere Lesbarkeit */
+            letter-spacing: -0.02em; /* Leichter negativer Buchstabenabstand wie bei Apple */
+        }
+
+        .hero-section p {
+            font-size: 22px;
+            color: #6e6e73; /* Helleres Grau für Beschreibung */
+            margin-bottom: 45px;
+            max-width: 750px;
+            line-height: 1.5;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            background-color: #007aff; /* Klassisches Apple-Blau */
+            color: #ffffff;
+            padding: 16px 32px; /* Größere Buttons */
+            border-radius: 999px; /* Stark abgerundete Ecken */
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 12px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-size: 19px;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3); /* Subtiler Button-Schatten */
+        }
+
+        .cta-buttons a:hover {
+            background-color: #005bb5; /* Dunkleres Blau beim Hover */
+            transform: translateY(-3px); /* Leichter Schwebe-Effekt */
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.4);
+        }
+
+        .cta-buttons a:last-child {
+            background-color: transparent;
+            color: #007aff;
+            border: 2px solid #007aff;
+            box-shadow: none; /* Kein Schatten für den Outline-Button */
+        }
+
+        .cta-buttons a:last-child:hover {
+            background-color: #007aff;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        /* Feature Sektionen (Dienstleistungs-Highlights) */
+        .feature-section {
+            padding: 100px 20px; /* Mehr Polsterung für klare Sektionen */
+            text-align: center;
+            background-color: #ffffff; /* Weißer Hintergrund */
+            margin-bottom: 40px; /* Abstand zur nächsten Sektion */
+            border-radius: 12px; /* Abgerundete Ecken */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04); /* Subtiler Schatten */
+        }
+
+        .feature-section.dark {
+            background-color: #1c1c1e; /* Sehr dunkler Hintergrund für Abwechslung */
+            color: #f0f0f5; /* Hellerer Text auf dunklem Hintergrund */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1d1d1f;
+            letter-spacing: -0.02em;
+        }
+        .feature-section.dark h2 {
+            color: #ffffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Angepasste Spaltenbreite */
+            gap: 30px; /* Abstand zwischen den Elementen */
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px; /* Einheitlich abgerundete Ecken */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03); /* Leichter Schatten für jedes Item */
+            text-align: left;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px); /* Leichter "Lift"-Effekt beim Hover */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-section.dark .feature-item {
+            background-color: #2c2c2e; /* Dunklere Hintergrundfarbe für Items */
+            color: #f0f0f5;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .feature-section.dark .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-item h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1d1d1f;
+            letter-spacing: -0.01em;
+        }
+        .feature-section.dark .feature-item h3 {
+            color: #007aff; /* Akzentfarbe für Überschriften in dunkler Sektion */
+        }
+
+        .feature-item p {
+            font-size: 17px;
+            color: #6e6e73;
+            line-height: 1.6;
+        }
+        .feature-section.dark .feature-item p {
+            color: #c0c0c0;
+        }
+
+        /* Call-to-Action Link unter den Features */
+        .all-services-link {
+            display: inline-block;
+            margin-top: 70px; /* Mehr Abstand */
+            font-size: 19px;
+            font-weight: 600;
+            color: #007aff;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+        .all-services-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #007aff;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        .all-services-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .all-services-link:hover {
+            color: #005bb5;
+        }
+
+        /* Kontakt Sektion */
+        .contact-section {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #f5f5f7; /* Heller Hintergrund */
+            margin-bottom: 0; /* Letzte Sektion vor dem Footer */
+            border-radius: 12px;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.03); /* Subtiler Schatten nach oben */
+        }
+
+        .contact-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1d1d1f;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-section p {
+            max-width: 750px;
+            margin: 0 auto 50px;
+            font-size: 19px;
+            color: #6e6e73;
+            line-height: 1.5;
+        }
+
+        .contact-form-wrapper {
+            background-color: #ffffff;
+            padding: 60px; /* Mehr Polsterung */
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid #e0e0e0; /* Dezenter Rand */
+        }
+
+        .contact-form-wrapper label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #1d1d1f;
+            font-size: 17px;
+        }
+
+        .contact-form-wrapper input[type="text"],
+        .contact-form-wrapper input[type="email"],
+        .contact-form-wrapper textarea {
+            width: calc(100% - 24px); /* Breite anpassen wegen Padding */
+            padding: 12px;
+            margin-bottom: 25px; /* Mehr Abstand */
+            border: 1px solid #dcdcdc; /* Dezenterer Rand */
+            border-radius: 8px; /* Abgerundete Felder */
+            box-sizing: border-box;
+            font-size: 17px;
+            color: #1d1d1f;
+            background-color: #fafafa; /* Leichter Hintergrund */
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-form-wrapper input[type="text"]:focus,
+        .contact-form-wrapper input[type="email"]:focus,
+        .contact-form-wrapper textarea:focus {
+            border-color: #007aff;
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2); /* Fokus-Ring */
+            outline: none;
+        }
+
+        .contact-form-wrapper textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form-wrapper button[type="submit"] {
+            background-color: #007aff;
+            color: #ffffff;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 19px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .contact-form-wrapper button[type="submit"]:hover {
+            background-color: #005bb5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.4);
+        }
+
+        /* Footer (Nur für visuelle Referenz, da Google Sites eigenen Footer hat) */
+        /* Diese Sektion wird in Google Sites vom eingebetteten Code umgeben sein und dient nur als visuelle Vorschau im Code */
+        footer {
+            background-color: #1c1c1e; /* Sehr dunkler Footer */
+            color: #888888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #007aff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Anpassungen */
+        @media (max-width: 900px) {
+            .hero-section h1 {
+                font-size: 48px;
+            }
+            .hero-section p {
+                font-size: 20px;
+            }
+            .feature-section h2, .contact-section h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 20px;
+                min-height: 480px;
+            }
+            .hero-section h1 {
+                font-size: 38px;
+            }
+            .hero-section p {
+                font-size: 18px;
+            }
+            .cta-buttons a {
+                padding: 14px 28px;
+                font-size: 17px;
+                margin: 0 8px;
+            }
+            .feature-section, .contact-section {
+                padding: 80px 20px;
+            }
+            .feature-section h2, .contact-section h2 {
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr; /* Eine Spalte auf kleinen Bildschirmen */
+                gap: 25px;
+            }
+            .feature-item {
+                padding: 30px;
+            }
+            .contact-form-wrapper {
+                padding: 40px;
+            }
+            .contact-form-wrapper input[type="text"],
+            .contact-form-wrapper input[type="email"],
+            .contact-form-wrapper textarea {
+                width: 100%;
+            }
+            .contact-form-wrapper button[type="submit"] {
+                width: 100%;
+                padding: 14px;
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 60px 15px;
+                min-height: 400px;
+            }
+            .hero-section h1 {
+                font-size: 30px;
+            }
+            .hero-section p {
+                font-size: 16px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .cta-buttons a {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .feature-section, .contact-section {
+                padding: 60px 15px;
+            }
+            .feature-section h2, .contact-section h2 {
+                font-size: 26px;
+            }
+            .contact-form-wrapper {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Otto Digital Service</a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Ihre Zukunft, intelligent automatisiert.</h1>
+            <p>Wir integrieren Künstliche Intelligenz nahtlos in Ihre Prozesse, entwickeln maßgeschneiderte Lösungen und stärken Ihre digitale Präsenz für nachhaltigen Erfolg.</p>
+            <div class="cta-buttons">
+                <a href="#dienstleistungen">Unsere Dienstleistungen entdecken</a>
+                <a href="#kontakt">Jetzt unverbindlich anfragen</a>
+            </div>
+        </div>
+        </section>
+
+    <section id="dienstleistungen" class="feature-section">
+        <div class="container">
+            <h2>Künstliche Intelligenz für Ihre Effizienz</h2>
+            <p style="max-width: 800px; margin: 0 auto 60px; font-size: 19px; color: #6e6e73;">Wir transformieren Ihre Arbeitsweise durch intelligente Automatisierung und maßgeschneiderte KI-Lösungen, die Effizienz und Produktivität steigern.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Automatisierte E-Mail-Bearbeitung</h3>
+                    <p>Lassen Sie KI Ihre E-Mails vorsortieren, kategorisieren und sogar erste Antworten generieren. Schluss mit dem manuellen E-Mail-Chaos!</p>
+                </div>
+                <div class="feature-item">
+                    <h3>KI-Assistenten für den Arbeitsalltag</h3>
+                    <p>Entwicklung intelligenter Assistenten, die Ihre Mitarbeiter bei Routineaufgaben unterstützen und Informationen schnell bereitstellen.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Implementierung von KI-Chatbots</h3>
+                    <p>Integrieren Sie leistungsstarke Chatbots in Ihren Kundenservice oder auf Ihrer Website für 24/7-Support und Lead-Qualifizierung.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Intelligente Datenanalyse</h3>
+                    <p>Nutzen Sie KI, um große Datenmengen zu analysieren, Muster zu erkennen und wertvolle Erkenntnisse für strategische Entscheidungen zu gewinnen.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Weitere Automatisierungsmöglichkeiten</h3>
+                    <p>Egal ob Datenverarbeitung, Dokumentenmanagement oder interne Kommunikation – wir finden die passende KI-Lösung zur Automatisierung Ihrer spezifischen Herausforderungen.</p>
+                </div>
+            </div>
+            <a href="URL_ZU_DIENSTLEISTUNGEN_SEITE.html" class="all-services-link">Alle Dienstleistungen ansehen &rarr;</a>
+        </div>
+    </section>
+
+    <section class="feature-section dark">
+        <div class="container">
+            <h2>Stärken Sie Ihre Digitale Präsenz</h2>
+            <p style="max-width: 800px; margin: 0 auto 60px; font-size: 19px; color: #c0c0c0;">Neben der intelligenten Automatisierung unterstützen wir Sie dabei, Ihre digitale Sichtbarkeit zu maximieren und neue Kunden zu erreichen.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Website-Erstellung & -Optimierung</h3>
+                    <p>Professioneller Aufbau und Relaunch Ihrer Unternehmenswebsite – modern, benutzerfreundlich und für Suchmaschinen optimiert.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Google My Business Listung</h3>
+                    <p>Stellen Sie sicher, dass Ihr Unternehmen bei lokalen Suchen auf Google optimal gefunden wird und Ihre Präsenz glänzt.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Online-Marketing-Beratung</h3>
+                    <p>Strategien und Konzepte zur Steigerung Ihrer Online-Reichweite und Kundengewinnung, passend zu Ihrem Geschäftsmodell.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact-section">
+        <div class="container">
+            <h2>Bereit für die Zukunft? Kontaktieren Sie uns!</h2>
+            <p>Erzählen Sie uns von Ihrem Projekt oder Ihren Ideen. Wir beraten Sie gerne unverbindlich.</p>
+            <div class="contact-form-wrapper">
+                <p style="text-align: center; font-style: italic; color: #888;">
+                    **WICHTIG:** Dieser Formular-Code ist nur eine visuelle Darstellung.<br>
+                    Du musst hier ein **Google Formular einbetten** oder einen anderen<br>
+                    Formular-Dienst nutzen, damit die Anfragen gesendet werden.
+                </p>
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Ihre Nachricht:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Anfrage senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Otto Digital Service. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="URL_ZU_IMPRESSUM.html">Impressum</a> |
+                <a href="URL_ZU_DATENSCHUTZ.html">Datenschutzerklärung</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
